@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="dbkit : Taking some of the pain out of Python's DB-API" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>dbkit</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/kgaughan/dbkit">View on GitHub</a>
+
+          <h1 id="project_title">dbkit</h1>
+          <h2 id="project_tagline">Taking some of the pain out of Python's DB-API</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/kgaughan/dbkit/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/kgaughan/dbkit/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>dbkit</h1>
+
+<p><strong>Documentation:</strong> <a href="http://dbkit.readthedocs.org/">http://dbkit.readthedocs.org/</a></p>
+
+<p><strong>dbkit</strong> is a library that abstracts away at least part of the pain involved in dealing with <a href="http://www.python.org/dev/peps/pep-0249/">DB-API 2</a> compatible database drivers.</p>
+
+<h2>Overview</h2>
+
+<p><em>dbkit</em> is intended to be used in circumstances where it is impractical or overkill to use an ORM such as <a href="http://sqlobject.org/">SQLObject</a> or <a href="http://sqlalchemy.org/">SQLAlchemy</a>, but it would be useful to at least abstract away some of the pain involved in dealing with the database.</p>
+
+<h3>Features</h3>
+
+<ul>
+<li>Rather than passing around database connections, statements are executed within a database <a href="http://docs.python.org/library/contextlib.html">context</a>, thus helping to decouple modules that interface with the database from the database itself and its connection details.</li>
+<li>Database contexts contain references to the exceptions exposed by the database driver, thus decoupling exception handling from the database driver.</li>
+<li>Easier to use transaction handling.</li>
+<li>Easier iteration over resultsets.</li>
+<li>Connection pooling. In addition, any code using pooled connections has no need to know connection pooling is in place.</li>
+<li>Query logging.</li>
+</ul><h3>Non-aims</h3>
+
+<ul>
+<li> Abstraction of SQL statements. The idea is to get rid of the more annoying but necessary boilerplate code involved in dealing with DB-API 2 drivers, not to totally abstract away SQL itself.</li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">dbkit maintained by <a href="https://github.com/kgaughan">kgaughan</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
